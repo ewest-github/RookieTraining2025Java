@@ -1,1 +1,1 @@
-# RookieTraining2025Java
+# 2025 新人研修 Java用
