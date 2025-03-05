@@ -1,0 +1,7 @@
+サーブレット/JSPとはWebアプリケーション開発に用いられるJavaのプログラムで、サーブレットはユーザーの要求に応じた処理を行い、JSPはその結果をWebページとして返す。
+
+Jaba以外のWeb開発言語
+・PHP
+・JavaScript
+・Ruby
+・Python
