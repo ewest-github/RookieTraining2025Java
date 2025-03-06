@@ -1,0 +1,16 @@
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:web="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+   
+   
+    <!-- サーブレットの定義 -->
+    <servlet>
+        <servlet-name>helloWorld</servlet-name>
+        <servlet-class>helloPackage.HelloWorld</servlet-class>
+    </servlet>
+
+    <!-- サーブレットのURLマッピング -->
+    <servlet-mapping>
+        <servlet-name>helloWorld</servlet-name>
+        <url-pattern>/sample</url-pattern>
+    </servlet-mapping>
+
+</web-app>
