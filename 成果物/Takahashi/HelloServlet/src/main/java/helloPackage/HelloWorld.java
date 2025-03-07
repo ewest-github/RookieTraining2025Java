@@ -10,6 +10,7 @@ import jakarta.servlet.http.HttpServletRequest; // クライアントから送�
 import jakarta.servlet.http.HttpServletResponse; // サーバーからクライアントへ返すレスポンスを設定するため。
 
 // サーブレットクラスの定義
+@WebServlet("/HelloServlet")
 public class HelloWorld extends HttpServlet {
 
 	// doGet メソッドの実装
