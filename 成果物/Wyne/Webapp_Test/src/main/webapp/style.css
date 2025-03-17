@@ -1,0 +1,40 @@
+/* コンテナの設定 */
+.container {
+    width: 30%; 
+    margin: auto; /* 左右のマージンを自動にして中央揃え */
+    border: 2px solid black; /* コンテナのボーダー */
+    padding: 23px; /* 内側の余白 */
+    padding-top: 3px;
+}
+/*実働総計の設定*/
+p{
+	text-align: right;
+	font-size: 20px;
+}
+/*ボタンの設定*/
+.button-container{
+	text-align: right;
+}
+/*テーブルの設定*/
+table {
+    border-collapse: collapse; /* セル間の隙間をなくす */
+    margin: 20px auto; /* テーブルを中央揃え（margin auto） */
+}
+
+table, th, td {
+    border: 2px solid black; /* テーブルセルのボーダー */
+}
+
+/*columnの設定*/
+th {
+    padding: 10px;
+    text-align: center;
+}
+/*romの設定*/
+td{
+	text-align: center;
+}
+
+
+
+
