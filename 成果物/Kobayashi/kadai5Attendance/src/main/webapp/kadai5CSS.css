@@ -1,0 +1,19 @@
+@charset "UTF-8";
+
+body {/*枠線で囲む*/
+  border: 1px solid #000;/*黒線1px*/
+  height: 1100px; /*高さ*/
+  width: 300px; /*幅*/
+}
+
+h1{ /*文字を少し右にずらす*/
+	text-indent: 20px;
+}
+
+th{ /*見出しの背景色を黄色に*/
+	background-color:#FFFF00;
+}
+
+table {/* セルの線を重ねて一つに */
+    border-collapse:  collapse;
+}
