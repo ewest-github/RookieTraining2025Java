@@ -29,6 +29,11 @@ public class Kadai5Servlet extends HttpServlet {
             int startTotalMinutes = startHour * 60 + startMinute;
             int endTotalMinutes = endHour * 60 + endMinute;
             double workTime = (endTotalMinutes - startTotalMinutes) / 60.0;
+            
+            // 12:00から13:00を跨ぐ時-1時間
+            if (startHour <= 12 && endHour >= 13) {
+                workTime -= 1.0;
+            }
 
             // Beanに実働時間をセット
             bean.setWorkingTime(i, workTime);
