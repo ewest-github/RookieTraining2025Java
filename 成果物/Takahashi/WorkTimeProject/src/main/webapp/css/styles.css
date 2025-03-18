@@ -1,0 +1,12 @@
+/* テーブルのヘッダー */
+.attendance-table th {
+    background-color: yellow;
+    text-align: center;
+    border: 1px solid black;
+}
+
+/* テーブルのセル */
+.attendance-table td {
+    text-align: center;
+    border: 1px solid black;
+}
