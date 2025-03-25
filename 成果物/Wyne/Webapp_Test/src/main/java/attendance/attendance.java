@@ -38,9 +38,10 @@ public class attendance extends HttpServlet {
         //実働総計の初期値設定
         double totalHours = 0.0;
         
-        
+        // 1か月の日数
+        int MAX_DAYS_IN_MONTH = 31; 
         // 31日分のデータを処理
-        for (int i = 1; i <= 31; i++) {
+        for (int i = 1; i <= MAX_DAYS_IN_MONTH; i++) {
             
         	//各日の 時間と分を取得する
             String startHour = request.getParameter("startHour" + i);
@@ -71,19 +72,15 @@ public class attendance extends HttpServlet {
             }
         }  
         
-        // Beanに実働総計を設定
+      // Beanに実働総計を設定
         workingHours.setTotalHours(totalHours);
         
-     // Bean をセッションに保存して、新しいサーブレットに転送
+     // セッションに Bean を保存して次のサーブレットへ転送
         HttpSession session = request.getSession();
         session.setAttribute("workingHours", workingHours);
 
      // POSTリクエストを次のサーブレットへフォワード
         request.getRequestDispatcher("insertAttendTime").forward(request, response);
-        
-        
-        
-
     }
 
     /*
