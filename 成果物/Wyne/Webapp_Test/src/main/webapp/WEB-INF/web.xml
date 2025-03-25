@@ -13,4 +13,14 @@
 		<servlet-name>AttendanceServlet</servlet-name>
 		<url-pattern>/attendance</url-pattern>
 	</servlet-mapping>
+	<servlet>
+    <servlet-name>AttendTimeInsertServlet</servlet-name>
+    <servlet-class>attendance.AttendTimeInsertServlet</servlet-class>
+</servlet>
+<servlet-mapping>
+    <servlet-name>AttendTimeInsertServlet</servlet-name>
+    <url-pattern>/insertAttendTime</url-pattern>
+</servlet-mapping>
+	
+	
 </web-app>

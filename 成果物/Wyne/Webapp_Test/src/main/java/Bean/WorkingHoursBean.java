@@ -4,47 +4,77 @@ import java.io.Serializable;
 import java.util.HashMap;
 import java.util.Map;
 
+//WorkingHoursBeanはSerializableを継承する
 public class WorkingHoursBean implements Serializable {
-    private static final long serialVersionUID = 1L;
-
-    private Map<Integer, String> startTimes = new HashMap<>(); // 各日の開始時刻を格納
-    private Map<Integer, String> endTimes = new HashMap<>(); // 各日の終了時刻を格納
     
+	/*各日の開始時刻を格納するマップ
+	  キーは日付（整数）で、値は開始時刻（文字列）。
+	  */
+	
+    private Map<Integer, String> startTimes = new HashMap<>(); 
     
-    private double totalHours; // 総合計実働時間
-
-    // 開始時刻の設定（startHour, startMinuteを受け取り、時刻を設定）
-    public void setStartTime(int day, String startHour, String startMinute) {
-        String startTime = startHour + ":" + startMinute; // 時間と分を結合
-        startTimes.put(day, startTime); // 日ごとの開始時刻を格納
-    }
-
-    // 終了時刻の設定（endHour, endMinuteを受け取り、時刻を設定）
-    public void setEndTime(int day, String endHour, String endMinute) {
-        String endTime = endHour + ":" + endMinute; // 時間と分を結合
-        endTimes.put(day, endTime); // 日ごとの終了時刻を格納
-    }
-
-    // 開始時刻の取得
+    /*各日の終了時刻を格納するマップ
+     * キーは日付（整数）で、値は終了時刻（文字列）。
+     */
+    
+    private Map<Integer, String> endTimes = new HashMap<>(); 
+    
+    // 実働総計の変数宣言
+    private double totalHours; 
+    
+    //変数に対するgetterとsetter
+    
+    /* 開始時刻を取得するメソッド
+     * @para 指定した日
+     * @return 指定した日の開始時刻
+     * @return 指定した日の開始時刻がなければ空文字 */
+    
     public String getStartTime(int day) {
-        return startTimes.getOrDefault(day, ""); // 指定した日の開始時刻を返す、なければ空文字を返す
+    
+        return startTimes.getOrDefault(day, ""); 
     }
 
-    // 終了時刻の取得
+    /* 開始時刻を取得するメソッド
+     * @para 指定した日
+     * @return 指定した日の終了時刻
+     * @return 指定した日の終了時刻がなければ空文字 */
+    
     public String getEndTime(int day) {
-        return endTimes.getOrDefault(day, ""); // 指定した日の終了時刻を返す、なければ空文字を返す
+    	
+        return endTimes.getOrDefault(day, ""); 
     }
 
-    // 実働時間の取得
+    /* 実働総計を取得するメソッド
+     * @return 実働時間*/
+    
     public double getTotalHours() {
-        return totalHours; // 実働時間を返す
+    	
+        return totalHours; 
+    }
+    
+    /*開始時刻を設定するメソッド
+     * @param 指定した日、開始時刻、開始分
+     * @put 指定した日と開始時刻をマップに送る*/
+    
+    public void setStartTime(int day, String startHour, String startMinute) {
+        String startTime = startHour + ":" + startMinute; 
+        startTimes.put(day, startTime);
     }
 
-    // 実働時間の設定
-    public void setTotalHours(double totalHours) {
-        this.totalHours = totalHours; // 実働時間を設定
+    /*終了時刻を設定するメソッド
+     * @param 指定した日、終了時刻、開始分
+     * @put 指定した日と終了時刻をマップに送る*/
+    
+    public void setEndTime(int day, String endHour, String endMinute) {
+        String endTime = endHour + ":" + endMinute; 
+        endTimes.put(day, endTime); 
     }
+
+    /*実働総計を設定するメソッド
+     * @param 実働時間*/
     
-    
+    public void setTotalHours(double totalHours) {
+        this.totalHours = totalHours; 
+    }
     
 }

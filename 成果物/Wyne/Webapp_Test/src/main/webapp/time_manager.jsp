@@ -21,7 +21,7 @@
     <form action="attendance" method="post">
     
     
-    <!-- 送信ボタン -->
+    <!-- 登録ボタン -->
     <div class="button-container">
         <input type="submit" onclick="alert('登録完了しました');" value="登録">
 	</div>
@@ -36,7 +36,7 @@
             0.0 h
         <% } %>
     </p>
-    
+
         <table border="1">
             <tr>
                 <th bgcolor="yellow">日付</th>
@@ -48,7 +48,10 @@
             { %>
                 <tr>
                     
-                    <td><%= i %>日</td> 
+                    <td><%= i %>日
+                    <!-- 日付を送信するための隠しフィールド -->
+                     <input type="hidden" name="attendDate<%= i %>" value="<%=String.format("2025-03-%02d", i )%>">
+                    </td> 
                     
                     <!-- 開始時刻の生成 -->   
                     <td>
@@ -60,7 +63,7 @@
 	                            %>
 	                             <option value="<%= hour %>"><%= hour %></option>
 	                                <% } %>
-	                            </select> : 
+	                        </select> : 
 	                            
                             <!-- 分の選択 -->
                             <select name="startMinute<%= i %>">

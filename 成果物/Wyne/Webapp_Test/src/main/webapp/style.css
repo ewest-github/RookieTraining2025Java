@@ -16,23 +16,28 @@ p{
 	text-align: right;
 }
 /*テーブルの設定*/
+
+
 table {
+	width: 100%;
     border-collapse: collapse; /* セル間の隙間をなくす */
-    margin: 20px auto; /* テーブルを中央揃え（margin auto） */
+    /*margin: 20px auto;  テーブルを中央揃え（margin auto） */
 }
 
 table, th, td {
     border: 2px solid black; /* テーブルセルのボーダー */
+ 
 }
 
 /*columnの設定*/
 th {
-    padding: 10px;
+    padding:10px;
     text-align: center;
 }
 /*romの設定*/
 td{
 	text-align: center;
+	
 }
 
 
